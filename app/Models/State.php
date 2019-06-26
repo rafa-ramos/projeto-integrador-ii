@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class State extends Model
 {
-    public $timestamps = false;      
+    public $timestamps = false;
+
+    protected $fillable = ['nome', 'uf'];
+
+//    public function states() {
+//        return $this->hasMany('App\Models\State');
+//    }
 } 

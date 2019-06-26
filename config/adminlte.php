@@ -110,15 +110,27 @@ return [
     'menu' => [
         'Menu',
         [
-            'text' => 'Home',
+            'text' => 'Menu',
             'url'  => 'admin',
-            'icon'  => 'home',
+             'icon'  => 'home',
         ],
         [
-            'text' => 'Estados',
-            'url'  => 'states',
-            'icon'  => 'flag',
+            'text' => 'Regiões',
+            'icon' => 'map-signs',
+            'submenu' => [
+                [
+                    'text' => 'Cidades',
+                    'url' => 'admin/city',
+                    'icon'  => 'circle-o',
+                ],
+                [
+                    'text' => 'Estados',
+                    'url'  => 'admin/state',
+                    'icon'  => 'circle-o',
+                ]
+            ],
         ]
+        
     ],
 
     /*
