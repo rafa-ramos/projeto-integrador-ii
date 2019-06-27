@@ -127,10 +127,37 @@ return [
                     'text' => 'Estados',
                     'url'  => 'admin/state',
                     'icon'  => 'circle-o',
+                ],
+                [
+                    'text' => 'Endereços',
+                    'url'  => 'admin/address',
+                    'icon'  => 'circle-o',
                 ]
-            ],
-        ]
-        
+
+            ]
+        ],
+        [
+            'text' => 'Produtos',
+            'url'  => 'admin/produce',
+            'icon'  => 'cube',
+        ],
+        [
+            'text' => 'Logística',
+            'icon' => 'truck',
+            'submenu' => [
+                [
+                    'text' => 'Pedidos',
+                    'url' => 'admin/demand',
+                    'icon'  => 'circle-o',
+                ],
+                [
+                    'text' => 'Status Pedido',
+                    'url'  => 'admin/statsofdemand',
+                    'icon'  => 'circle-o',
+                ]
+
+            ]
+        ],
     ],
 
     /*

@@ -33,6 +33,15 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
         Route::get('{id}/destroy', 'CityController@destroy')->name('admin.city.destroy');
     });
 
+    Route::group(['prefix' => 'produce'], function () {
+        Route::get('', 'ProduceController@index')->name('admin.produce');
+        Route::get('create', 'ProduceController@create')->name('admin.produce.create');
+        Route::post('store', 'ProduceController@store')->name('admin.produce.store');
+        Route::get('{id}/edit', 'ProduceController@edit')->name('admin.produce.edit');
+        Route::put('{id}/update', 'ProduceController@update')->name('admin.produce.update');
+        Route::get('{id}/destroy', 'ProduceController@destroy')->name('admin.produce.destroy');
+    });
+
 });
 
 Route::get('/', 'Site\SiteController@index')->name('home');

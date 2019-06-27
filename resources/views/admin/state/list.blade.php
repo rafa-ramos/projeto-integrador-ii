@@ -7,8 +7,7 @@
 <ol class="breadcrumb">
   <li><a href="">Menu</a></li>
   <li><a href="">Regiões</a></li>
-  <li><a href="">Estados</a>
-  <li>
+  <li><a href="">Estados</a></li>
 </ol>
 @stop
 
