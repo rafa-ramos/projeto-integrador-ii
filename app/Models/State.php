@@ -10,7 +10,7 @@ class State extends Model
 
     protected $fillable = ['nome', 'uf'];
 
-//    public function states() {
-//        return $this->hasMany('App\Models\State');
-//    }
+    public function citys() {
+        return $this->hasMany('App\Models\City');
+    }
 } 

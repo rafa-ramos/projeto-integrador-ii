@@ -15,8 +15,6 @@ class StateController extends Controller
     }
 
     public function create() {
-        $state = new State();
-        // $state->operation = 'Novo';
         return view('admin.state.create');
     }
 

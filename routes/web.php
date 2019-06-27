@@ -24,6 +24,14 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
         Route::get('{id}/destroy', 'StateController@destroy')->name('admin.state.destroy');
     });
 
+    Route::group(['prefix' => 'city'], function () {
+        Route::get('', 'CityController@index')->name('admin.city');
+        Route::get('create', 'CityController@create')->name('admin.city.create');
+        Route::post('store', 'CityController@store')->name('admin.city.store');
+        Route::get('{id}/edit', 'CityController@edit')->name('admin.city.edit');
+        Route::put('{id}/update', 'CityController@update')->name('admin.city.update');
+        Route::get('{id}/destroy', 'CityController@destroy')->name('admin.city.destroy');
+    });
 
 });
 
