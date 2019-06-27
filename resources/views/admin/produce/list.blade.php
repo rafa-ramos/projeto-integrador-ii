@@ -17,6 +17,7 @@
       <div class="box">
         <div class="box-header">
           <a href="{{ route('admin.produce.create') }}" class="btn btn-primary">Novo Produto</a>
+          <a href="{{route('admin.produce.pdf')}}" class="btn btn-warning">Gerar PDF</a>
         </div>
         <div class="box-body">
           @include('admin.includes.alerts')

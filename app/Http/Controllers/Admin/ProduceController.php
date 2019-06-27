@@ -59,4 +59,15 @@ class ProduceController extends Controller
             return redirect()->back() - with('error', $message);
         }
     }
+
+    public function pdf(){
+        $produces = Produce::all();
+
+        $view = \View::make('admin.produce.pdf', ['produces' => $produces]);
+        $html = $view->render();
+        $pdf = \PDF::loadHTML($html)->setPaper('a4', 'portrait')->setWarnings(false)->save('myfile.pdf');
+
+        return $pdf->stream('Produtos.pdf');
+
+    }
 }

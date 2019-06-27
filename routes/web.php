@@ -40,6 +40,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
         Route::get('{id}/edit', 'ProduceController@edit')->name('admin.produce.edit');
         Route::put('{id}/update', 'ProduceController@update')->name('admin.produce.update');
         Route::get('{id}/destroy', 'ProduceController@destroy')->name('admin.produce.destroy');
+
+        Route::get('pdf', 'ProduceController@pdf')->name('admin.produce.pdf');
     });
 
     Route::group(['prefix' => 'statusOfDemand'], function () {
@@ -50,6 +52,16 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
         Route::put('{id}/update', 'StatusOfDemandController@update')->name('admin.statusOfDemand.update');
         Route::get('{id}/destroy', 'StatusOfDemandController@destroy')->name('admin.statusOfDemand.destroy');
     });
+
+    Route::group(['prefix' => 'address'], function () {
+        Route::get('', 'AddressController@index')->name('admin.address');
+        Route::get('create', 'AddressController@create')->name('admin.address.create');
+        Route::post('store', 'AddressController@store')->name('admin.address.store');
+        Route::get('{id}/edit', 'AddressController@edit')->name('admin.address.edit');
+        Route::put('{id}/update', 'AddressController@update')->name('admin.address.update');
+        Route::get('{id}/destroy', 'AddressController@destroy')->name('admin.address.destroy');
+    });
+
 
 });
 
