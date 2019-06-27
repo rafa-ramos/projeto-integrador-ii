@@ -6,7 +6,6 @@
     <h1>Cadastro de Produtos</h1>
     <ol class="breadcrumb">
         <li>Menu</li>
-        <li>Regiões</li>
         <li>Produtos</li>
         <li>Novo</li>
     </ol>

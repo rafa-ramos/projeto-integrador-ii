@@ -42,6 +42,15 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'namespace' => 'Adm
         Route::get('{id}/destroy', 'ProduceController@destroy')->name('admin.produce.destroy');
     });
 
+    Route::group(['prefix' => 'statusOfDemand'], function () {
+        Route::get('', 'StatusOfDemandController@index')->name('admin.statusOfDemand');
+        Route::get('create', 'StatusOfDemandController@create')->name('admin.statusOfDemand.create');
+        Route::post('store', 'StatusOfDemandController@store')->name('admin.statusOfDemand.store');
+        Route::get('{id}/edit', 'StatusOfDemandController@edit')->name('admin.statusOfDemand.edit');
+        Route::put('{id}/update', 'StatusOfDemandController@update')->name('admin.statusOfDemand.update');
+        Route::get('{id}/destroy', 'StatusOfDemandController@destroy')->name('admin.statusOfDemand.destroy');
+    });
+
 });
 
 Route::get('/', 'Site\SiteController@index')->name('home');

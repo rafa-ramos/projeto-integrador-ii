@@ -151,8 +151,8 @@ return [
                     'icon'  => 'circle-o',
                 ],
                 [
-                    'text' => 'Status Pedido',
-                    'url'  => 'admin/statsofdemand',
+                    'text' => 'Status de Pedidos',
+                    'url'  => 'admin/statusOfDemand',
                     'icon'  => 'circle-o',
                 ]
 

@@ -1,12 +1,14 @@
 @extends('adminlte::page')
 
-@section('title', 'Produtos')
+@section('title', 'Status de Pedidos')
 
 @section('content_header')
-<h1>Listagem de Produtos</h1>
+<h1>Listagem de Status de Pedidos</h1>
 <ol class="breadcrumb">
   <li><a href="">Menu</a></li>
-  <li><a href="">Produtos</a></li>
+  <li><a href="">Logística</a></li>
+  <li><a href="">Status de Pedidos</a>
+  <li>
 </ol>
 @stop
 
@@ -16,7 +18,7 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-          <a href="{{ route('admin.produce.create') }}" class="btn btn-primary">Novo Produto</a>
+          <a href="{{ route('admin.statusOfDemand.create') }}" class="btn btn-primary">Novo Status de Pedido</a>
         </div>
         <div class="box-body">
           @include('admin.includes.alerts')
@@ -25,20 +27,18 @@
             <thead>
             <tr>
               <th>ID</th>
-              <th>Nome</th>
-              <th>Peso</th>
+              <th>Descrição</th>
               <th>Ação</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($produces as $prod)
+            @foreach($statusOfDemands as $status)
               <tr>
-                <td>{{ $prod->id }}</td>
-                <td>{{ $prod->nome }}</td>
-                <td>{{ $prod->peso}}</td>
+                <td>{{ $status->id }}</td>
+                <td>{{ $status->descricao }}</td>
                 <td>
-                  <a href="{{ route('admin.produce.edit', ['id'=>$prod->id]) }}" class="btn-sm btn-success">Editar</a>
-                  <a href="{{ route('admin.produce.destroy', ['id'=>$prod->id]) }}" class="btn-sm btn-danger">Remover</a>
+                  <a href="{{ route('admin.statusOfDemand.edit', ['id'=>$status->id]) }}" class="btn-sm btn-success">Editar</a>
+                  <a href="{{ route('admin.statusOfDemand.destroy', ['id'=>$status->id]) }}" class="btn-sm btn-danger">Remover</a>
                 </td>
               </tr>
             @endforeach
